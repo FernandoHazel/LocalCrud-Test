@@ -1,0 +1,31 @@
+{
+  "TaskList": [
+    {
+      "id": "1",
+      "area": "AreaA",
+      "date": "2024-1-24",
+      "startTime":  "09:00",
+      "endTime":  "11:00",
+      "booker": "User1",
+      "activity": "Meeting"
+    },
+    {
+      "id": "2",
+      "area": "AreaB",
+      "date": "2024-1-26",
+      "startTime":  "11:00",
+      "endTime":  "12:00",
+      "booker": "User2",
+      "activity": "Meeting"
+    },
+    {
+      "id": "3",
+      "area": "AreaC",
+      "date": "2024-1-27",
+      "startTime":  "16:00",
+      "endTime":  "17:00",
+      "booker": "User3",
+      "activity": "Meeting"
+    }
+  ]
+}

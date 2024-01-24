@@ -5,10 +5,31 @@ import com.example.itinerarioactivity.model.Task
 import java.time.LocalDate
 import java.time.LocalTime
 import java.util.*
+import java.io.BufferedReader
+import java.io.InputStreamReader
 
-// Guardamos los datos en una lista para trabajar con ellos
-// Más adelante los guardaré de manera local con un json o en SQLite si me da tiempo
+
 class Datasource() {
+
+    // Leer el archivo json
+    fun readJsonFile(fileName: String): String {
+        val inputStream = javaClass.classLoader?.getResourceAsStream(fileName)
+        val reader = BufferedReader(InputStreamReader(inputStream))
+        val stringBuilder = StringBuilder()
+
+        reader.use {
+            var line = it.readLine()
+            while (line != null) {
+                stringBuilder.append(line)
+                line = it.readLine()
+            }
+        }
+
+        return stringBuilder.toString()
+    }
+
+    // Guardamos los datos en una lista para trabajar con ellos
+    // Más adelante los guardaré de manera local con un json o en SQLite si me da tiempo
     // Hubo que requerir esta API para que el método of() de LocalDate y LocalTime pudiera funcionar
     var tasks = mutableListOf<Task>(
         Task(

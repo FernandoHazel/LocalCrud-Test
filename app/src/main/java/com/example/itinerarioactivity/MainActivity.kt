@@ -47,20 +47,18 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TasksApp(){
-    // Cargamos los datos de la db
+    // Definimos la estructura de la app
     Scaffold (
         topBar = { Topbar() },
         floatingActionButton = { CreateButton() },
     ){it ->
         LazyColumn(contentPadding = it){
-            val taskList = Datasource().readDB()
+            val taskList = Datasource().readDB() // Cargamos los datos de la db
             items(taskList){
                 TaskCard(task = it)
             }
         }
     }
-
-
 }
 
 @Composable
@@ -70,6 +68,7 @@ fun CreateButton() {
             .size(100.dp),
         onClick = {
             // Navegar a la vista de crear tarea
+            //...
         }
     ) {
         Icon(

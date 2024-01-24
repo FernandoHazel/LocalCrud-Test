@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ItinerarioActivity</string>
+    <string name="del_elem_Title">¿Borrar elemento?</string>
+    <string name="del_elem">Esta acción no se puede deshacer</string>
 </resources>
