@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Topbar(modifier: Modifier = Modifier){
+    // Componente de la barra superior
     CenterAlignedTopAppBar(
         title = {
             Row(

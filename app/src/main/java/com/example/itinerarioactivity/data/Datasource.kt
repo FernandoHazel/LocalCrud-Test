@@ -30,7 +30,7 @@ class Datasource() {
 
     // Guardamos los datos en una lista para trabajar con ellos
     // Más adelante los guardaré de manera local con un json o en SQLite si me da tiempo
-    // Hubo que requerir esta API para que el método of() de LocalDate y LocalTime pudiera funcionar
+    // para que los datos persistan entre sesiones
     var tasks = mutableListOf<Task>(
         Task(
             id = UUID.randomUUID().toString(),
@@ -79,7 +79,7 @@ class Datasource() {
         )
     )
 
-    // Método para leer la db
+    // Método para leer la lista con la información
     fun readDB(): List<Task>{
         return tasks
     }
